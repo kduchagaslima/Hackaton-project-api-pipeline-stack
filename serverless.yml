@@ -1,6 +1,7 @@
 service: caller-pipeline
 provider:
   name: aws
+  stage: prod
   runtime: python3.8
   region: us-east-1
 
@@ -18,7 +19,7 @@ functions:
   caller-codepipeline:
     handler: handler.main
     environment:
-      GROUP: rafabarbosa
+      GROUP: Grupo-2
     events:
       - http:
          path: activate
